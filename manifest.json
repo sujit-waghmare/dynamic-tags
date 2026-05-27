@@ -1,0 +1,10 @@
+{
+  "id": "dynamic-tags",
+  "name": "Dynamic Tags",
+  "version": "1.5.5",
+  "minAppVersion": "1.0.0",
+  "description": "Dynamically strips priority prefixes, formats multi-word tags, and customizes base tag styling. In v1.5.0 added new tags: #Pending, #In-progress, #Submitted, #In-review, #Success, #Failed, #Expired. In v1.5.5 added Nested Tags — e.g. #Success/To-Do renders as 'To Do' with circle icon and green background.",
+  "author": "Waghmare",
+  "authorUrl": "https://github.com/sujit-waghmare",
+  "isDesktopOnly": false
+}

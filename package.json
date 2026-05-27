@@ -1,0 +1,36 @@
+{
+  "name": "dynamic-tags",
+  "version": "1.5.5",
+  "description": "Dynamically strips priority prefixes, formats multi-word tags, and customizes base tag styling for Obsidian.",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite build --watch --mode development",
+    "build": "vite build --mode production",
+    "version": "node version-bump.mjs",
+    "clean": "rm -f main.js styles.css",
+    "prebuild": "npm run clean"
+  },
+  "keywords": [
+    "obsidian",
+    "obsidian-plugin",
+    "tags",
+    "priority-tags",
+    "styling"
+  ],
+  "author": "Waghmare",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sujit-waghmare/dynamic-tags.git"
+  },
+  "devDependencies": {
+    "@codemirror/state": "^6.4.1",
+    "@codemirror/view": "^6.26.0",
+    "@types/node": "^20.11.30",
+    "builtin-modules": "^3.3.0",
+    "obsidian": "^1.5.7",
+    "typescript": "^5.4.3",
+    "vite": "^5.2.6"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "defaultTagColor": "#cf69ad",
+  "textColor": "#031a66",
+  "fontFamily": "\"Google Sans Code\", sans-serif",
+  "customFontUrl": "https://fonts.googleapis.com/css2?family=Fjalla+One&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Playwrite+NO:wght@100..400&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap",
+  "customFonts": [
+    {
+      "name": "Fjalla One",
+      "css": "\"Fjalla One\", sans-serif"
+    },
+    {
+      "name": "Google Sans Code",
+      "css": "\"Google Sans Code\", sans-serif"
+    },
+    {
+      "name": "Playwrite NO",
+      "css": "\"Playwrite NO\", sans-serif"
+    },
+    {
+      "name": "Tiro Devanagari Hindi",
+      "css": "\"Tiro Devanagari Hindi\", sans-serif"
+    }
+  ],
+  "isBold": true,
+  "isItalic": false,
+  "isUnderline": false
+}

@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build artifacts (root-level main.js + styles.css are committed for Obsidian)
+dist/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Vite cache
+.vite/

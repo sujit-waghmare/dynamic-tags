@@ -1,0 +1,12 @@
+{
+  "id": "dynamic-tags",
+  "name": "Dynamic Tags",
+  "version": "1.5.5",
+  "minAppVersion": "1.0.0",
+  "author": "Waghmare",
+  "authorUrl": "https://github.com/sujit-waghmare",
+  "repo": "sujit-waghmare/dynamic-tags",
+  "description": "Priority tags, status tags, nested tags, and custom tag styling with Google Fonts support.",
+  "tags": ["tags", "styling", "productivity", "ui"],
+  "isDesktopOnly": false
+}
