@@ -138,8 +138,7 @@ CodeMirror takes a fraction of a millisecond to apply the visual widget when swa
 ---
 
 ## ☕ Support
-
-Building and maintaining these tools takes significant time and energy. Your tips keep the caffeine flowing and helps me stay focused on delivering high-quality, reliable products for the community.
+Building and maintaining these tools takes significant time and energy. Your tips keep the caffeine flowing and helps me stay focused on delivering high-quality, reliable products for the community. 
 
 <p align="left">
   <a href="https://paypal.me/waghmaresujit">
@@ -154,9 +153,8 @@ Building and maintaining these tools takes significant time and energy. Your tip
 <details>
 <summary><b>Donate via UPI (QR Code)</b></summary>
 <br>
-
+<p align="left">
 <img src="https://img.shields.io/badge/exotic.sus@axl-122E31?style=for-the-badge&logo=upi&logoColor=white" />
-
+</p>
 <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=exotic.sus@axl&pn=Sujit%20Rajabhau%20Waghmare&cu=INR" alt="UPI QR Code" />
-
 </details>
