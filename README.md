@@ -6,6 +6,10 @@
 
 Dynamically strips priority prefixes, formats multi-word tags, and customizes base tag styling for Obsidian.
 
+| Tag Showcase | Tag Nesting |
+| :--- | :--- |
+| ![Tag Showcase](https://github.com/sujit-waghmare/dynamic-tags/blob/48936e05a13990119345cc5c37dd75d71ad97ecc/assets/tags-showcase.gif) | ![Tag Nesting](https://github.com/sujit-waghmare/dynamic-tags/blob/48936e05a13990119345cc5c37dd75d71ad97ecc/assets/tags-nesting.gif) |
+
 ---
 
 ## Installation
