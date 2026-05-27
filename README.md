@@ -1,9 +1,8 @@
 # Dynamic Tags
 
-> **Author:** [Waghmare](https://github.com/sujit-waghmare)
-> **Version:** 1.5.5
-> **Plugin ID:** [dynamic-tags](https://github.com/sujit-waghmare/dynamic-tags)
-> **Mobile Friendly:** Yes
+<img src="https://img.shields.io/github/v/release/sujit-waghmare/dynamic-tags?color=blue&style=flat-square" /><img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" /><br><img src="https://img.shields.io/github/release-date/sujit-waghmare/dynamic-tags?style=flat-square" />
+<img src="https://img.shields.io/badge/Author-Waghmare-orange?style=flat-square" /><br>
+<img src="https://img.shields.io/badge/Plugin%20ID-dynamic--tags-lightgrey?style=flat-square" /><br><img src="https://img.shields.io/badge/Mobile%20Friendly-Yes-brightgreen?style=flat-square" />
 
 Dynamically strips priority prefixes, formats multi-word tags, and customizes base tag styling for Obsidian.
 
