@@ -1,0 +1,181 @@
+/* Dynamic Priority Tags - Plugin Stylesheet */
+
+/* 1. Universal Text Formatting (Applies to ALL tags) */
+.tag, .is-live-preview .cm-hashtag-end {
+    font-family: var(--dynamic-tag-font) !important;
+    font-weight: var(--dynamic-tag-weight) !important;
+    font-style: var(--dynamic-tag-style) !important;
+    text-decoration: var(--dynamic-tag-decoration) !important;
+}
+
+/* 2. General Tag Custom Coloring (Excluded from Priority + Status Tags) */
+.tag:not([href^="#High" i]):not([href^="#Medium" i]):not([href^="#Mid" i]):not([href^="#Low" i]):not([href="#Pending"]):not([href="#In-progress"]):not([href="#Submitted"]):not([href="#In-review"]):not([href="#Success"]):not([href="#Failed"]):not([href="#Expired"]),
+.is-live-preview .cm-hashtag-end:not([class*="cm-tag-high" i]):not([class*="cm-tag-medium" i]):not([class*="cm-tag-mid" i]):not([class*="cm-tag-low" i]):not([class*="cm-tag-pending"]):not([class*="cm-tag-in-progress"]):not([class*="cm-tag-submitted"]):not([class*="cm-tag-in-review"]):not([class*="cm-tag-success"]):not([class*="cm-tag-failed"]):not([class*="cm-tag-expired"]) {
+    background-color: var(--dynamic-tag-bg) !important;
+    color: var(--dynamic-tag-color) !important;
+}
+
+/* 3. Priority Tags Core Base */
+.tag[href="#High" i],.tag[href="#Medium" i],.tag[href="#Mid" i],.tag[href="#Low" i]{font-size:0 !important;}
+.tag[href="#High" i]::after{content:"High";font-size:13px;}
+.tag[href="#Medium" i]::after,.tag[href="#Mid" i]::after{content:"Medium";font-size:13px;}
+.tag[href="#Low" i]::after{content:"Low";font-size:13px;}
+.is-live-preview .cm-hashtag-begin[class*="cm-tag-high" i],.is-live-preview .cm-hashtag-begin[class*="cm-tag-medium" i],.is-live-preview .cm-hashtag-begin[class*="cm-tag-mid" i],.is-live-preview .cm-hashtag-begin[class*="cm-tag-low" i]{display:none !important;}
+
+/* Priority Tags Structure (Colors locked to white, removed text locks) */
+.tag[href^="#High" i],.tag[href^="#Medium" i],.tag[href^="#Mid" i],.tag[href^="#Low" i],
+.is-live-preview .cm-hashtag-end[class*="cm-tag-high" i],.is-live-preview .cm-hashtag-end[class*="cm-tag-medium" i],.is-live-preview .cm-hashtag-end[class*="cm-tag-mid" i],.is-live-preview .cm-hashtag-end[class*="cm-tag-low" i]{
+    display:inline-flex;align-items:center;color:#fff !important;border-radius:6px;padding:2px 10px 2px 8px;border:none;letter-spacing:.02em;text-transform:capitalize;
+}
+
+.tag[href^="#High" i]::before,.tag[href^="#Medium" i]::before,.tag[href^="#Mid" i]::before,.tag[href^="#Low" i]::before,.is-live-preview .cm-hashtag-end[class*="cm-tag-high" i]::before,.is-live-preview .cm-hashtag-end[class*="cm-tag-medium" i]::before,.is-live-preview .cm-hashtag-end[class*="cm-tag-mid" i]::before,.is-live-preview .cm-hashtag-end[class*="cm-tag-low" i]::before{content:"";display:inline-block;width:14px;height:14px;margin-right:4px;background-repeat:no-repeat;background-position:center;background-size:contain;flex-shrink:0;}
+
+/* Colors and Icons */
+.tag[href^="#High" i],.is-live-preview .cm-hashtag-end[class*="cm-tag-high" i]{background-color:rgba(220,50,50,.22)!important;border:1px solid rgba(220,50,50,.45)!important;}
+.tag[href^="#High" i]::before,.is-live-preview .cm-hashtag-end[class*="cm-tag-high" i]::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23f87171' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='14' width='4' height='8' rx='1'/%3E%3Crect x='9' y='9' width='4' height='13' rx='1'/%3E%3Crect x='16' y='3' width='4' height='19' rx='1'/%3E%3C/svg%3E");}
+.tag[href^="#Medium" i],.tag[href^="#Mid" i],.is-live-preview .cm-hashtag-end[class*="cm-tag-medium" i],.is-live-preview .cm-hashtag-end[class*="cm-tag-mid" i]{background-color:rgba(139,92,246,.22)!important;border:1px solid rgba(139,92,246,.45)!important;}
+.tag[href^="#Medium" i]::before,.tag[href^="#Mid" i]::before,.is-live-preview .cm-hashtag-end[class*="cm-tag-medium" i]::before,.is-live-preview .cm-hashtag-end[class*="cm-tag-mid" i]::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='14' width='4' height='8' rx='1' stroke='%23a78bfa'/%3E%3Crect x='9' y='9' width='4' height='13' rx='1' stroke='%23a78bfa'/%3E%3Crect x='16' y='3' width='4' height='19' rx='1' stroke='%23a78bfa' opacity='0.3'/%3E%3C/svg%3E");}
+.tag[href^="#Low" i],.is-live-preview .cm-hashtag-end[class*="cm-tag-low" i]{background-color:rgba(59,130,246,.22)!important;border:1px solid rgba(59,130,246,.45)!important;}
+.tag[href^="#Low" i]::before,.is-live-preview .cm-hashtag-end[class*="cm-tag-low" i]::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='14' width='4' height='8' rx='1' stroke='%2360a5fa'/%3E%3Crect x='9' y='9' width='4' height='13' rx='1' stroke='%2360a5fa' opacity='0.3'/%3E%3Crect x='16' y='3' width='4' height='19' rx='1' stroke='%2360a5fa' opacity='0.3'/%3E%3C/svg%3E");}
+
+/* Source Mode Highlights */
+.markdown-source-view:not(.is-live-preview) [class*="cm-tag-high" i] { background-color: rgba(220, 50, 50, 0.25) !important; }
+.markdown-source-view:not(.is-live-preview) [class*="cm-tag-medium" i], .markdown-source-view:not(.is-live-preview) [class*="cm-tag-mid" i] { background-color: rgba(139, 92, 246, 0.25) !important; }
+.markdown-source-view:not(.is-live-preview) [class*="cm-tag-low" i] { background-color: rgba(59, 130, 246, 0.25) !important; }
+/* ============================================================
+   Latest Tags — Status Tags Snippet
+   Supports: #Pending, #In-progress, #Submitted,
+             #In-review, #Success, #Failed, #Expired
+   Lucide SVG icons inline. Append after priority-tags.css
+   ============================================================ */
+
+/* ── Shared base ── */
+.tag[href="#Pending"],
+.tag[href="#In-progress"],
+.tag[href="#Submitted"],
+.tag[href="#In-review"],
+.tag[href="#Success"],
+.tag[href="#Failed"],
+.tag[href="#Expired"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700 !important;
+  font-style: normal !important;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  border-radius: 10px;
+  padding: 3px 12px 3px 9px;
+  font-size: 0.82em;
+  border: none;
+  letter-spacing: 0.02em;
+}
+
+/* ── Shared icon pseudo ── */
+.tag[href="#Pending"]::before,
+.tag[href="#In-progress"]::before,
+.tag[href="#Submitted"]::before,
+.tag[href="#In-review"]::before,
+.tag[href="#Success"]::before,
+.tag[href="#Failed"]::before,
+.tag[href="#Expired"]::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  flex-shrink: 0;
+}
+
+/* ══════════════════════════════════════════
+   PENDING — Orange/Brown bg, orange icon
+   Lucide: alert-triangle
+   ══════════════════════════════════════════ */
+.tag[href="#Pending"] {
+  background-color: rgba(180, 83, 9, 0.35) !important;
+  border: 1px solid rgba(251, 146, 60, 0.4) !important;
+  color: #fb923c !important;
+}
+.tag[href="#Pending"]::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23fb923c' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z'/%3E%3Cline x1='12' y1='9' x2='12' y2='13'/%3E%3Cline x1='12' y1='17' x2='12.01' y2='17'/%3E%3C/svg%3E");
+}
+
+/* ══════════════════════════════════════════
+   IN PROGRESS — Blue bg, blue dashed icon
+   Lucide: loader (dashed circle)
+   ══════════════════════════════════════════ */
+.tag[href="#In-progress"] {
+  background-color: rgba(30, 64, 175, 0.35) !important;
+  border: 1px solid rgba(96, 165, 250, 0.4) !important;
+  color: #60a5fa !important;
+}
+.tag[href="#In-progress"]::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2360a5fa' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83'/%3E%3C/svg%3E");
+}
+
+/* ══════════════════════════════════════════
+   SUBMITTED — Purple bg, purple send icon
+   Lucide: send
+   ══════════════════════════════════════════ */
+.tag[href="#Submitted"] {
+  background-color: rgba(76, 29, 149, 0.45) !important;
+  border: 1px solid rgba(167, 139, 250, 0.4) !important;
+  color: #a78bfa !important;
+}
+.tag[href="#Submitted"]::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23a78bfa' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='22' y1='2' x2='11' y2='13'/%3E%3Cpolygon points='22 2 15 22 11 13 2 9 22 2'/%3E%3C/svg%3E");
+}
+
+/* ══════════════════════════════════════════
+   IN REVIEW — Yellow/Olive bg, yellow icon
+   Lucide: refresh-cw
+   ══════════════════════════════════════════ */
+.tag[href="#In-review"] {
+  background-color: rgba(101, 85, 0, 0.45) !important;
+  border: 1px solid rgba(202, 183, 20, 0.4) !important;
+  color: #cabd14 !important;
+}
+.tag[href="#In-review"]::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23cabd14' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='23 4 23 10 17 10'/%3E%3Cpolyline points='1 20 1 14 7 14'/%3E%3Cpath d='M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15'/%3E%3C/svg%3E");
+}
+
+/* ══════════════════════════════════════════
+   SUCCESS — Dark green bg, green icon
+   Lucide: check-circle
+   ══════════════════════════════════════════ */
+.tag[href="#Success"] {
+  background-color: rgba(20, 83, 45, 0.5) !important;
+  border: 1px solid rgba(74, 222, 128, 0.4) !important;
+  color: #4ade80 !important;
+}
+.tag[href="#Success"]::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%234ade80' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 11.08V12a10 10 0 1 1-5.93-9.14'/%3E%3Cpolyline points='22 4 12 14.01 9 11.01'/%3E%3C/svg%3E");
+}
+
+/* ══════════════════════════════════════════
+   FAILED — Dark red bg, red icon
+   Lucide: x-circle
+   ══════════════════════════════════════════ */
+.tag[href="#Failed"] {
+  background-color: rgba(127, 29, 29, 0.45) !important;
+  border: 1px solid rgba(248, 113, 113, 0.4) !important;
+  color: #f87171 !important;
+}
+.tag[href="#Failed"]::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23f87171' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cline x1='15' y1='9' x2='9' y2='15'/%3E%3Cline x1='9' y1='9' x2='15' y2='15'/%3E%3C/svg%3E");
+}
+
+/* ══════════════════════════════════════════
+   EXPIRED — Dark grey bg, grey icon
+   Lucide: clock
+   ══════════════════════════════════════════ */
+.tag[href="#Expired"] {
+  background-color: rgba(55, 55, 55, 0.5) !important;
+  border: 1px solid rgba(156, 163, 175, 0.35) !important;
+  color: #9ca3af !important;
+}
+.tag[href="#Expired"]::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpolyline points='12 6 12 12 16 14'/%3E%3C/svg%3E");
+}
