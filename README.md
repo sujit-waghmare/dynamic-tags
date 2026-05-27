@@ -2,7 +2,7 @@
 
 > **Author:** [Waghmare](https://github.com/sujit-waghmare)
 > **Version:** 1.5.5
-> **Plugin ID:** `dynamic-tags`
+> **Plugin ID:** [dynamic-tags](https://github.com/sujit-waghmare/dynamic-tags)
 > **Mobile Friendly:** Yes
 
 Dynamically strips priority prefixes, formats multi-word tags, and customizes base tag styling for Obsidian.
@@ -155,9 +155,7 @@ Building and maintaining these tools takes significant time and energy. Your tip
 <summary><b>Donate via UPI (QR Code)</b></summary>
 <br>
 
-<img src="https://img.shields.io/badge/Pay_via_UPI-122E31?style=for-the-badge&logo=upi&logoColor=white" />
-
-`exotic.sus@axl`
+<img src="https://img.shields.io/badge/exotic.sus@axl-122E31?style=for-the-badge&logo=upi&logoColor=white" />
 
 <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=exotic.sus@axl&pn=Sujit%20Rajabhau%20Waghmare&cu=INR" alt="UPI QR Code" />
 
