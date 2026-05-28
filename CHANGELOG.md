@@ -3,6 +3,23 @@
 All notable changes to the **Dynamic Tags** Obsidian plugin are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.6.0] — 2026-05-28
+
+### Added new status tag `#Re-schedule` with color pill and inline icon.
+- Re-schedule added to priority prefix regex — nested form `#Re-schedule/Task` strips prefix and formats correctly.
+- `styles.css` updated: Re-schedule in `:not()` exclusion chain and base tag rules.
+
+### Dynamic Tags Sidebar (ItemView)
+A dedicated right-sidebar view was introduced, transforming the plugin from a pure text decorator into a navigation hub. The sidebar parses the active file on `file-open` events and displays two panels: Tags in Note (all tags from the current file) and Related Tags (tags co-occurring across the vault).
+
+### Contextual Tagging Engine
+A context engine was added that computes vault-wide tag relationships in real time whenever a new file is opened.
+
+### Global Search Hook
+Clicking any tag in the sidebar executes a native Obsidian global tag search, instantly filtering the file explorer to matching notes.
+
+---
+
 ## [1.5.5] — 2026-05-28
 
 ### Added

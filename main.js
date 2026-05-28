@@ -16,22 +16,15 @@ function formatTagString(str) {
     return str.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 }
 
-// ── SMART EXTRACTOR: Rips out ONLY the correct css2 URL from raw HTML/CSS blocks ──
 function extractCleanUrl(input) {
     if (!input) return '';
-    
-    // specifically hunt for the Google Fonts css2 endpoint and stop at quotes or spaces
     const css2Match = input.match(/(https:\/\/fonts\.googleapis\.com\/css2\?[^"'\s\)]+)/);
-    
     if (css2Match) {
-        // Return the clean URL and fix any HTML-encoded ampersands
         return css2Match[1].replace(/&amp;/g, '&');
     }
-    
     return input.trim();
 }
 
-// Parses the clean URL to get the font family names
 function extractGoogleFonts(cleanUrl) {
     if (!cleanUrl) return [];
     try {
@@ -47,7 +40,7 @@ function extractGoogleFonts(cleanUrl) {
 }
 
 const prefixMatcher = new MatchDecorator({
-    regexp: /#(High|Medium|Mid|Low)[\/\-]/ig,
+    regexp: /#(High|Medium|Mid|Low|Pending|In-progress|Submitted|In-review|Success|Failed|Expired|Re-schedule)[\/\-]/ig,
     decoration: match => Decoration.replace({})
 });
 
@@ -74,7 +67,7 @@ class DynamicPriorityTags extends Plugin {
         this.registerMarkdownPostProcessor((element, context) => {
             const tags = element.querySelectorAll("a.tag");
             tags.forEach(tag => {
-                const priorityMatch = tag.innerText.match(/^#(High|Medium|Mid|Low)[\/\-](.+)$/i);
+                const priorityMatch = tag.innerText.match(/^#(High|Medium|Mid|Low|Pending|In-progress|Submitted|In-review|Success|Failed|Expired|Re-schedule)[\/\-](.+)$/i);
                 if (priorityMatch) {
                     tag.innerText = formatTagString(priorityMatch[2]);
                 } else {
@@ -178,7 +171,6 @@ class DynamicTagSettingTab extends PluginSettingTab {
                     this.plugin.injectWebFonts();
                     this.plugin.updateStyle();
                     
-                    // If the plugin cleaned up HTML tags, instantly refresh the UI to show the clean URL
                     if (value !== cleanUrl || this.plugin.settings.customFonts.length > 0) {
                         this.display(); 
                     }
@@ -244,7 +236,6 @@ class DynamicTagSettingTab extends PluginSettingTab {
                     this.plugin.updateStyle();
                 }));
 
-        // ── FONT PREVIEW SECTION ──
         containerEl.createEl('hr');
         containerEl.createEl('h2', {text: 'Font Preview'});
 
