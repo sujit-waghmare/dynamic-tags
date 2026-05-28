@@ -22,7 +22,7 @@ export default class DynamicTags extends Plugin {
       const tags = element.querySelectorAll<HTMLAnchorElement>("a.tag");
       tags.forEach((tag) => {
         const priorityMatch = tag.innerText.match(
-          /^#(High|Medium|Mid|Low)[\/\-](.+)$/i
+          /^#(High|Medium|Mid|Low|Pending|In-progress|Submitted|In-review|Success|Failed|Expired|Re-schedule)[\/\-](.+)$/i
         );
         if (priorityMatch) {
           tag.innerText = formatTagString(priorityMatch[2]);
