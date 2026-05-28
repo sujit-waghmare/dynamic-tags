@@ -102,6 +102,7 @@ Use a forward slash `/` to categorize.
 | `#Success` | Green |
 | `#Failed` | Dark Red |
 | `#Expired` | Grey |
+| `#Re-Schedule` | Orange |
 
 ### Normal Multi-Word Tags
 
